@@ -10,5 +10,5 @@ const PostSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-const Category = mongoose.model("Post", PostSchema);
+const Post = mongoose.model("Post", PostSchema);
 module.exports = { Post, PostSchema };
