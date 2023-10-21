@@ -1,10 +1,9 @@
 const router = require("express").Router();
-const CategoryController = require("../controllers/CategoryController");
-const createCategoryMiddleware = require("../middleware/createCategory");
+const PostController = require("../controllers/PostController");
+const createPostMiddleware = require("../middleware/createPost");
 
 router
   .route("/")
-  .get()
-  .post([createCategoryMiddleware], CategoryController.createCategory);
+  .post([createPostMiddleware], PostController.createPost);
 
 module.exports = router;
